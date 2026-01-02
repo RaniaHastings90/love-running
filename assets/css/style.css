@@ -1,6 +1,7 @@
 /* Google fonts import */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap");
 
+/* Asterisk wildcard selector to override default styles added by the browser */
 * {
   padding: 0;
   margin: 0;
@@ -50,7 +51,7 @@ header a {
 #menu {
   letter-spacing: 4px;
   font-size: 110%;
-  list-style: none;
+  list-style-type: none;
 }
 
 #menu > li {
@@ -83,6 +84,7 @@ nav {
 .nav-toggle-label {
   font-size: 2rem;
 }
+
 /* main content*/
 main {
   /* Make main element take up remaining space to push footer down */
@@ -115,6 +117,7 @@ main {
   color: #ffffff;
 }
 
+/* Reasons section */
 #reasons {
   margin: 20px auto;
   width: 90%;
@@ -156,6 +159,41 @@ hr {
   align-items: center;
   justify-content: center;
 }
+
+/* meetup times section */
+#times {
+  background: url("../images/dublin-city.webp") no-repeat center / cover;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#times div {
+  color: #fafafa;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  text-align: center;
+  /* This will not wrap on screens of less than 400px wide. Each div will expand to fill the available space on its row */
+  flex-basis: 200px;
+  flex-grow: 1;
+  /* create a grid of meetup time divs over the background image*/
+  border: 2px solid white;
+}
+
+#times h3 {
+  /* override the heading colour set in general styles */
+  color: #fafafa;
+}
+
+/* Gallery Page*/
+#photos img {
+  width: 100%;
+  line-height: 1em;
+}
+
+#photos {
+  line-height: 0;
+}
+
 /* footer */
 #social-networks {
   text-align: center;
@@ -229,29 +267,8 @@ hr {
     align-self: flex-end;
   }
 }
-/* meetup times section */
-#times {
-  background: url("../images/dublin-city.webp") no-repeat center / cover;
-  display: flex;
-  flex-wrap: wrap;
-}
 
-#times div {
-  color: #fafafa;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  text-align: center;
-  /* This will not wrap on screens of less than 400px wide. Each div will expand to fill the available space on its row */
-  flex-basis: 200px;
-  flex-grow: 1;
-  /* create a grid of meetup time divs over the background image*/
-  border: 2px solid white;
-}
-
-#times h3 {
-  /* override the heading colour set in general styles */
-  color: #fafafa;
-}
+/* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
