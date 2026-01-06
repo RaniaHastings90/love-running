@@ -20,7 +20,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #252525;
@@ -128,7 +128,8 @@ main {
   margin-bottom: 20px;
   text-align: center;
 }
-hr {
+
+#benefits hr {
   border-top: 1px solid #3a3a3a;
   margin: 5px 0;
 }
@@ -208,6 +209,13 @@ hr {
   padding: 5%;
   color: #3a3a3a;
 }
+/* media query: large or landscape phones (576px and up) */
+@media screen and (min-width: 576px) {
+  #photos {
+    column-count: 2;
+    column-gap: 0;
+  }
+}
 
 /* media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -265,6 +273,11 @@ hr {
   #benefits-mental > div {
     text-align: end;
     align-self: flex-end;
+  }
+
+  /* Gallery */
+  #photos {
+    column-count: 4;
   }
 }
 
