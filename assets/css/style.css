@@ -87,7 +87,7 @@ nav {
 
 /* main content*/
 main {
-  /* Make main element take up remaining space to push footer down */
+  /* Enlarge main element to push footer down */
   flex: 1 0 auto;
   /*Add margin to the top to prevent content from being covered by the header*/
   margin-top: 47px;
@@ -100,12 +100,12 @@ main {
 #hero {
   height: 600px;
   width: 100%;
-  background-color: lightgreen;
   background: url("../images/hero-image.webp") no-repeat center center/cover;
   position: relative;
 }
 
 #cover-text {
+  /* Final rgba value sets the opacity so it is semi-transparent */
   background-color: rgba(241, 109, 107, 0.7);
   font-size: 130%;
   position: absolute;
@@ -153,7 +153,7 @@ main {
   margin-bottom: 20px;
   width: 90vw;
   height: 90vw;
-  /* make the square circle */
+  /* make the square image circle */
   border-radius: 50%;
   max-width: 300px;
   max-height: 300px;
@@ -328,7 +328,7 @@ main {
 
   /* Gallery */
   #photos {
-    column-count: 4;
+    column-count: 3;
   }
 
   /* Form */
@@ -358,6 +358,11 @@ main {
 @media screen and (min-width: 992px) {
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
+  }
+
+  /* Gallery */
+  #photos {
+    column-count: 4;
   }
 }
 
